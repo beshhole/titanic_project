@@ -21,24 +21,23 @@ plt.show()
 
 print(train['Age'].isnull().sum())
 
-# def fillnulls(cols):
-#     ages = cols[0]
-#     classes = cols[1]
-#     if pd.isna(ages):
-#         if classes == 1:
-#             return 37
-#         elif classes == 2:
-#             return 28
-#         else:
-#             return 24
-#     else:
-#         return ages
-#
-#
-# train['Age'] = train[['Age', 'Pclass']].apply(fillnulls, axis=1)
-# print(train[['Age', 'Name']])
 
-# OR:
+def fillnulls(cols):
+    ages = cols[0]
+    classes = cols[1]
+    if pd.isna(ages):
+        if classes == 1:
+            return 37
+        elif classes == 2:
+            return 28
+        else:
+            return 24
+    else:
+        return ages
+
+
+train['Age'] = train[['Age', 'Pclass']].apply(fillnulls, axis=1)
+print(train[['Age', 'Name']])
 
 train.loc[train['Sex'] == 'male', 'Sex'] = 1
 train.loc[train['Sex'] == 'female', 'Sex'] = 0
