@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 pd.set_option('display.width', 500)
 pd.set_option('display.max_columns', 12)
 
-train = pd.read_csv('E:/Besha/belajar/pandas exercise/exercise 11/train.csv')
+train = pd.read_csv('E:/.../train.csv')
 
 train.drop('PassengerId', axis=1, inplace=True)
 
