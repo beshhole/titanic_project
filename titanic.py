@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 pd.set_option('display.width', 500)
 pd.set_option('display.max_columns', 12)
 
+# dataset taken from https://www.kaggle.com/c/titanic/
 train = pd.read_csv('E:/.../train.csv')
 
 train.drop('PassengerId', axis=1, inplace=True)
